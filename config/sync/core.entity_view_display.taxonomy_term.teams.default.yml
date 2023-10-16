@@ -1,0 +1,21 @@
+uuid: e4c69c4b-4cc1-434d-8872-46d0a04072ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.teams
+  module:
+    - text
+id: taxonomy_term.teams.default
+targetEntityType: taxonomy_term
+bundle: teams
+mode: default
+content:
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

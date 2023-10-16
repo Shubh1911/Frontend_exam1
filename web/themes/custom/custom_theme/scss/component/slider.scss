@@ -1,0 +1,92 @@
+// Reset default styles for the container
+.container {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+// Styles for the specific view display with ID "page_1"
+.view-display-id-page_1 {
+  background-color: red;
+
+  // Styles for the active/slick/current view row within the slider
+  .views-row.slick-slide.slick-current.slick-active {
+    position: relative;
+
+    // Styles for the title element inside the active view row
+    .views-field-title {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+
+      // Styles for the link inside the title element
+      .field-content {
+        a {
+          font-size: 40px;
+          color: black;
+        }
+      }
+    }
+
+    // Styles for the carousel image inside the active view row
+    .views-field-field-carousel-image {
+      .field-content {
+        img {
+          object-fit: cover;
+          max-width: 100%;
+        }
+      }
+    }
+
+    // Styles for team 1, team 2, and location elements inside the active view row
+    .views-field-field-team-1,
+    .views-field-field-team-2,
+    .views-field-field-location {
+      position: absolute;
+
+      // Styles for the links inside team 1, team 2, and location elements
+      .field-content {
+        a {
+          font-size: 40px;
+          color: black;
+        }
+      }
+    }
+
+    // Position and styles for team 1 element
+    .views-field-field-team-1 {
+      bottom: 40%;
+      left: 20%;
+    }
+
+    // Position and styles for team 2 element
+    .views-field-field-team-2 {
+      bottom: 40%;
+      left: 35%;
+    }
+
+    // Position and styles for location element
+    .views-field-field-location {
+      bottom: 30%;
+      left: 20%;
+    }
+
+    // Styles for match date element
+    .views-field-field-match-date {
+      position: absolute;
+      bottom: 20%;
+      font-size: 30px;
+      left: 20%;
+      font-weight: 600;
+    }
+
+    // Styles for description element
+    .views-field-field-description {
+      position: absolute;
+      bottom: 10%;
+      font-size: 30px;
+      left: 20%;
+      font-weight: 600;
+    }
+  }
+}

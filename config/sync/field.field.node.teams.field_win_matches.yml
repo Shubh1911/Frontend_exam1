@@ -1,0 +1,23 @@
+uuid: c5471ec2-bbc1-4d49-b73b-91ce6705e2f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_win_matches
+    - node.type.teams
+id: node.teams.field_win_matches
+field_name: field_win_matches
+entity_type: node
+bundle: teams
+label: 'Win Matches'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

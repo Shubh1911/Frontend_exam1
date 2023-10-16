@@ -1,0 +1,28 @@
+uuid: ae824b6f-7a80-46c7-be09-fb5fdf2ba8fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.teams.field_lose_matches
+    - field.field.node.teams.field_team_logo
+    - field.field.node.teams.field_team_name
+    - field.field.node.teams.field_win_matches
+    - node.type.teams
+  module:
+    - user
+id: node.teams.teaser
+targetEntityType: node
+bundle: teams
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_lose_matches: true
+  field_team_logo: true
+  field_team_name: true
+  field_win_matches: true

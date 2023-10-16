@@ -1,0 +1,18 @@
+uuid: d9cdc736-d180-480a-b1ff-56460962d3d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Match Content Type'
+type: match_content_type
+description: 'to display the banner with details'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
