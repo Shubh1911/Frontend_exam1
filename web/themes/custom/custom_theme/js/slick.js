@@ -4,17 +4,20 @@
       // Initialize Slick Slider on the wrapper element.
       $(".view-id-banner.view-display-id-page_1 .view-content").slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
         autoplay: true,
         autoplaySpeed: 2000,
         slidesToShow: 1,
         adaptiveHeight: true,
         prevArrow:
-          '<span class="Slick-Prev arrow"><i class="lni lni-chevron-left"></i></span>',
+          '<span class="Slick-Prev arrow"><i class="fa-solid fa-chevron-left"></i></span>',
         nextArrow:
-          '<span class="Slick-Next arrow"><i class="lni lni-chevron-right"></i></span>',
-      });
+          '<span class="Slick-Next arrow"><i class="fa-solid fa-chevron-right"></i></span>',
+      }),
+			$('.match_details--name:contains("India"), .match_details--name:contains("IND")').each(function() {
+				$(this).closest('.banner_div').find('.hash_tag').css('display', 'block');
+			});
     },
   };
 })(jQuery, Drupal);
