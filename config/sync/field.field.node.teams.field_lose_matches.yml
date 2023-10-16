@@ -1,0 +1,23 @@
+uuid: 39687caf-b82b-4c3d-936d-4c263bb608be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lose_matches
+    - node.type.teams
+id: node.teams.field_lose_matches
+field_name: field_lose_matches
+entity_type: node
+bundle: teams
+label: 'Lose Matches'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

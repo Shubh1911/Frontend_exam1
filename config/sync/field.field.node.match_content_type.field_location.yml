@@ -1,0 +1,29 @@
+uuid: 27d12bec-f01e-43ff-81e1-ead51bdb8ecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.match_content_type
+    - taxonomy.vocabulary.venues
+id: node.match_content_type.field_location
+field_name: field_location
+entity_type: node
+bundle: match_content_type
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      venues: venues
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,61 @@
+uuid: 115b0ed6-8962-4b41-b42c-1e6f7a95702d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.teams.field_lose_matches
+    - field.field.node.teams.field_team_logo
+    - field.field.node.teams.field_team_name
+    - field.field.node.teams.field_win_matches
+    - node.type.teams
+  module:
+    - image
+    - user
+id: node.teams.default
+targetEntityType: node
+bundle: teams
+mode: default
+content:
+  field_lose_matches:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_team_logo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_team_name:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_win_matches:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

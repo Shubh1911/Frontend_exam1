@@ -1,0 +1,19 @@
+uuid: b69d2df2-9689-429c-b1e4-f70f79748cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.match_content_type
+id: node.match_content_type.field_description
+field_name: field_description
+entity_type: node
+bundle: match_content_type
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
