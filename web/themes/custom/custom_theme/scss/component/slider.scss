@@ -1,92 +1,146 @@
-// Reset default styles for the container
+@use '../partials/importer' as *;
+
 .container {
   margin: 0;
   padding: 0;
   max-width: 100%;
 }
 
-// Styles for the specific view display with ID "page_1"
 .view-display-id-page_1 {
-  background-color: red;
 
-  // Styles for the active/slick/current view row within the slider
-  .views-row.slick-slide.slick-current.slick-active {
+  .banner_div {
     position: relative;
 
-    // Styles for the title element inside the active view row
-    .views-field-title {
+    .match_details {
       position: absolute;
-      top: 50%;
-      left: 10%;
+      top: 30%;
+      left: 5%;
+      display: flex;
+      flex-direction: column;
+      /* column-gap: 70px; */
+      justify-content: space-around;
+      height: 50%;
 
-      // Styles for the link inside the title element
-      .field-content {
-        a {
+      .match_details--name {
+        color: $white-color;
+
+        span {
           font-size: 40px;
-          color: black;
         }
-      }
-    }
 
-    // Styles for the carousel image inside the active view row
-    .views-field-field-carousel-image {
-      .field-content {
-        img {
-          object-fit: cover;
-          max-width: 100%;
-        }
-      }
-    }
-
-    // Styles for team 1, team 2, and location elements inside the active view row
-    .views-field-field-team-1,
-    .views-field-field-team-2,
-    .views-field-field-location {
-      position: absolute;
-
-      // Styles for the links inside team 1, team 2, and location elements
-      .field-content {
         a {
+          font-weight: bold;
+          color: $white-color;
           font-size: 40px;
-          color: black;
         }
+      }
+
+      .match_details--time {
+        font-weight: bold;
+        font-size: 30px;
+
+        span {
+
+          .datetime {
+            color: $purple-color;
+          }
+        }
+      }
+
+      .match_details--location {
+        color: $white-color;
+
+        a {
+          font-weight: bold;
+          text-decoration: none;
+          color: $white-color;
+          font-size: 35px;
+        }
+      }
+
+      .match_details--description {
+        font-weight: bold;
+        text-decoration: none;
+        color: $white-color;
+        font-size: 20px;
+
       }
     }
 
-    // Position and styles for team 1 element
-    .views-field-field-team-1 {
-      bottom: 40%;
-      left: 20%;
+    .banner_image {
+      background-color: $black-color;
+
+      img {
+        object-fit: cover;
+        max-width: 100%;
+
+        cursor: pointer;
+        opacity: 0.5;
+      }
     }
 
-    // Position and styles for team 2 element
-    .views-field-field-team-2 {
-      bottom: 40%;
-      left: 35%;
-    }
-
-    // Position and styles for location element
-    .views-field-field-location {
-      bottom: 30%;
-      left: 20%;
-    }
-
-    // Styles for match date element
-    .views-field-field-match-date {
-      position: absolute;
-      bottom: 20%;
-      font-size: 30px;
-      left: 20%;
-      font-weight: 600;
-    }
-
-    // Styles for description element
-    .views-field-field-description {
-      position: absolute;
-      bottom: 10%;
-      font-size: 30px;
-      left: 20%;
-      font-weight: 600;
+    .hash_tag {
+      display: none;
+      font-size: 35px;
+      color: white;
     }
   }
+
+  .Slick-Prev.arrow.slick-arrow {
+    position: absolute;
+    bottom: 10%;
+    right: 8.5%;
+    font-size: 1.5rem;
+    z-index: 9;
+
+    i {
+      opacity: 0.7;
+      color: $white-color;
+      background-color:rgba($white-color, $alpha: 0.5);
+      padding: 1rem;
+    }
+  }
+
+  .Slick-Next.arrow.slick-arrow {
+
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 1.5rem;
+    z-index: 9;
+
+    i {
+      opacity: 0.7;
+      color: $white-color;
+      background-color: rgba($white-color, $alpha: 0.5);
+      padding: 1rem;
+    }
+  }
+
+  .view-content.slick-initialized.slick-slider.slick-dotted {
+    .slick-dots {
+      bottom: 70px;
+      text-align: right;
+      padding-right: 17rem;
+
+      li {
+        width: 30px;
+        margin: 0;
+
+        button {
+          &::before {
+            background-color: $white-color;
+            content: "";
+            height: 5px;
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
